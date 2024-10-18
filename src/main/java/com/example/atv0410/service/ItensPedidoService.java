@@ -18,7 +18,7 @@ public class ItensPedidoService implements IService<ItensPedidoDto, Integer> {
     }
 
     /**
-     * esse metodo cria o ItensPedio
+     * esse metodo cria o ItensPedido
      * @param entity
      * @return
      */
@@ -40,7 +40,7 @@ public class ItensPedidoService implements IService<ItensPedidoDto, Integer> {
     }
 
     /**
-     * esse
+     * esse metodo lista todos os itenspedido
      * @return
      */
     @Override
@@ -49,12 +49,22 @@ public class ItensPedidoService implements IService<ItensPedidoDto, Integer> {
         return List.of();
     }
 
+    /**
+     * esse metodo atualiza as informações de um itenspedido
+     * @param id
+     * @param entity
+     * @return
+     */
     @Override
     public ItensPedidoDto update(Integer id, ItensPedidoDto entity) {
         log.info("ItensPedidoService::update(id, entity)");
         return null;
     }
 
+    /**
+     * esse metodo deleta um itenspedido
+     * @param id
+     */
     @Override
     public void delete(Integer id) {
         log.info("ItensPedidoService::delete(id)");

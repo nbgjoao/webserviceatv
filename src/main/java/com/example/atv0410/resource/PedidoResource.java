@@ -19,6 +19,11 @@ public class PedidoResource implements IResource<PedidoDto, Integer>{
         this.pedidoService = pedidoService;
     }
 
+    /**
+     * Cria um novo pedido no sistema.
+     * @param entity
+     * @return
+     */
     @Override
     @PostMapping(
             consumes = {MediaType.APPLICATION_JSON_VALUE},
@@ -29,6 +34,11 @@ public class PedidoResource implements IResource<PedidoDto, Integer>{
         return null;
     }
 
+    /**
+     * Retorna os detalhes de um pedido específico pelo seu ID.
+     * @param id
+     * @return
+     */
     @Override
     @GetMapping(value = "/{id}",
             produces = {MediaType.APPLICATION_JSON_VALUE}
@@ -38,6 +48,10 @@ public class PedidoResource implements IResource<PedidoDto, Integer>{
         return null;
     }
 
+    /**
+     * Retorna a lista de todos os pedidos.
+     * @return
+     */
     @Override
     @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE})
     public List<PedidoDto> get() {
@@ -45,6 +59,12 @@ public class PedidoResource implements IResource<PedidoDto, Integer>{
         return List.of();
     }
 
+    /**
+     * Atualiza os detalhes de um pedido pelo seu ID.
+     * @param id
+     * @param entity
+     * @return
+     */
     @Override
     @PutMapping(value = "/{id}",
             produces = {MediaType.APPLICATION_JSON_VALUE},
@@ -57,6 +77,10 @@ public class PedidoResource implements IResource<PedidoDto, Integer>{
         return null;
     }
 
+    /**
+     * Remove um pedido do sistema pelo seu ID.
+     * @param id
+     */
     @Override
     @DeleteMapping(value = "/{id}")
     public void delete(@PathVariable Integer id) {
